@@ -18,16 +18,22 @@ if __name__ == "__main__":
     start = time.time()
     result1 = [x + x for x in arr1]
     end = time.time()
-    print(len(result1))
-    print(f"Standard python: {end-start}") 
-
+    print(f"Standard python addiction time: {end-start}") 
+    
+    start = time.time()
+    result1 = [x*5 for x in arr1]
+    end = time.time()
+    print(f"Standard python multiplication time: {end-start}") 
+    
     # Numpy
     np_arr1 = np.array(arr1)
 
-
     start = time.time()
-
     result2 = np_arr1 + np_arr1
     end = time.time()
-    print(f"Numpy time: {end-start}") 
-    print(result1 == result2)
+    print(f"Numpy addiction time: {end-start}") 
+    
+    start = time.time()
+    result = arr1 * 5
+    end = time.time()
+    print(f"Numpy multiplication time: {end-start}") 
